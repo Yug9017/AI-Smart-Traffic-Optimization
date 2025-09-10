@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanPulse - Smart Traffic Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div id="loading-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-75 z-50 hidden items-center justify-center">
+        <div class="loading-pulse"></div>
+    </div>
+
+
+    <main id="login-page" class="page min-h-screen flex items-center justify-center p-4">
+        <div class="w-full max-w-md">
+            <div class="bg-white rounded-xl shadow-2xl p-8 text-center">
+                <div class="flex justify-center items-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    <h1 class="text-4xl font-bold text-gray-800 ml-3">UrbanPulse</h1>
+                </div>
+                <p class="text-gray-500 mb-8">Sign in to access the future of traffic management.</p>
+                <form id="login-form">
+                    <div class="space-y-4">
+                        <input type="text" placeholder="Username" id="username" class="w-full px-4 py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                        <input type="password" placeholder="Password" id="password" class="w-full px-4 py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg mt-8 transition-transform transform hover:scale-105">Login</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <div id="app-container" class="hidden">
+        
+        <header class="bg-white shadow-md sticky top-0 z-40">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    <h1 class="text-2xl font-bold text-gray-800 ml-2">UrbanPulse</h1>
+                </div>
+                <ul class="flex items-center space-x-6">
+                    <li><a href="#home" class="nav-link text-gray-600 hover:text-blue-600 font-semibold transition">Home</a></li>
+                    <li><a href="#dashboard" class="nav-link text-gray-600 hover:text-blue-600 font-semibold transition">Dashboard</a></li>
+                    <li><a href="#tech-stack" class="nav-link text-gray-600 hover:text-blue-600 font-semibold transition">Tech Stack</a></li>
+                    <li><a href="#help" class="nav-link text-gray-600 hover:text-blue-600 font-semibold transition">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="home-page" class="page p-8">
+            <div class="container mx-auto">
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+                    <h2 class="text-4xl font-bold text-gray-800">Welcome to the Future of Urban Mobility</h2>
+                    <p class="text-gray-600 mt-4 max-w-3xl mx-auto">UrbanPulse leverages real-time video analysis and AI to create a dynamic, responsive, and efficient traffic management system. Reduce congestion, lower emissions, and make city travel smarter for everyone.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mt-12 items-center">
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-semibold text-gray-800">How It Works</h3>
+                        <p class="text-gray-600 mt-2">Our system analyzes live video feeds to count vehicles, identify traffic density, and intelligently allocate green light durations, optimizing flow at intersections in real-time.</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                        <img src="./assets/img1.png" alt="Illustration of traffic analysis" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <h3 class="text-3xl font-bold text-gray-800 text-center mb-8">Proven Impact & Measurable Results</h3>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-xl shadow-lg p-6">
+                            <h4 class="text-xl font-semibold text-gray-700">Reduction in Congestion</h4>
+                            <p class="text-4xl font-bold text-blue-600 mt-2">Up to 30%</p>
+                            <svg class="mt-4 w-full h-24" viewBox="0 0 100 50" preserveAspectRatio="none"><polyline fill="none" stroke="#3b82f6" stroke-width="2" points="0,40 20,20 40,30 60,10 80,25 100,5"></polyline></svg>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg p-6">
+                            <h4 class="text-xl font-semibold text-gray-700">Faster Commute Times</h4>
+                            <p class="text-4xl font-bold text-teal-500 mt-2">20% Faster</p>
+                            <svg class="mt-4 w-full h-24" viewBox="0 0 100 50" preserveAspectRatio="none"><polyline fill="none" stroke="#14b8a6" stroke-width="2" points="0,35 20,25 40,30 60,15 80,10 100,20"></polyline></svg>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg p-6">
+                            <h4 class="text-xl font-semibold text-gray-700">Lower Vehicle Emissions</h4>
+                            <p class="text-4xl font-bold text-green-500 mt-2">15% Lower</p>
+                             <svg class="mt-4 w-full h-24" viewBox="0 0 100 50" preserveAspectRatio="none"><polyline fill="none" stroke="#22c55e" stroke-width="2" points="0,45 20,35 40,25 60,20 80,15 100,5"></polyline></svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-3xl font-bold text-gray-800 text-center mb-6">Experience the Difference</h3>
+                    <p class="text-center text-gray-600 max-w-2xl mx-auto mb-8">This section demonstrates the immediate impact of UrbanPulse on traffic flow, transforming congestion into clarity.</p>
+                    <div class="bg-gray-900 rounded-lg overflow-hidden aspect-video max-w-4xl mx-auto">
+                        <img src="./assets/img2.png" alt="A clear view of a city intersection with vehicles identified by bounding boxes" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <h3 class="text-3xl font-bold text-gray-800 text-center mb-8">A Versatile Solution for a Smarter City</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                            <h4 class="font-bold text-xl text-gray-800">City Intersections</h4><p class="text-gray-600 mt-2">Optimize daily commuter traffic and reduce bottlenecks.</p>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                            <h4 class="font-bold text-xl text-gray-800">Event Management</h4><p class="text-gray-600 mt-2">Manage traffic flow around stadiums and event venues.</p>
+                        </div>
+                         <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                             <h4 class="font-bold text-xl text-gray-800">Emergency Services</h4><p class="text-gray-600 mt-2">Create clear paths for ambulances and fire trucks.</p>
+                        </div>
+                         <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                             <h4 class="font-bold text-xl text-gray-800">Smart Highways</h4><p class="text-gray-600 mt-2">Regulate on-ramp flow to maintain highway speed.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 grid md:grid-cols-2 gap-8 items-center bg-white rounded-xl shadow-lg p-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800">The Technology Behind the Pulse</h3>
+                        <p class="text-gray-600 mt-2">UrbanPulse is built on a foundation of cutting-edge computer vision and robust backend logic, allowing for intelligent, real-time decision-making.</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800">The Eyes: Computer Vision</h4>
+                            <p class="text-gray-600">Using "OpenCV" and the "YOLOv8" model, our system 'sees' and identifies every vehicle with incredible speed and accuracy.</p>
+                        </div>
+                         <div>
+                            <h4 class="text-xl font-bold text-gray-800">The Brain: Dynamic Control</h4>
+                            <p class="text-gray-600">With a "Python" and "Flask" backend, the system processes visual data, calculates traffic density, and makes smart decisions in milliseconds.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 max-w-3xl mx-auto">
+                    <div class="bg-blue-600 text-white rounded-xl shadow-lg p-8 text-center">
+                        <p class="text-xl italic">"UrbanPulse is a game-changer. The ability to adapt to traffic in real-time has led to a noticeable reduction in congestion and has made our city's transport network significantly more efficient."</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 text-center mb-4">See It in Action</h3>
+                    <div class="bg-gray-900 rounded-lg overflow-hidden aspect-video max-w-4xl mx-auto">
+                        <video src="./assets/video1.mp4" loop muted autoplay class="w-full h-full object-cover" poster="https://placehold.co/1280x720/111827/FFFFFF?text=Promo+Video+Here"></video>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <main id="dashboard-page" class="page p-4 sm:p-8 hidden">
+             <div class="container mx-auto max-w-7xl">
+                <div class="bg-white rounded-xl shadow-lg p-6 mb-8 card">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-2 text-left">Control Panel</h2>
+                    <p class="text-gray-500 mb-4">Select the video source to begin traffic analysis.</p>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <button id="start-webcam-btn" class="flex items-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="mr-2" viewBox="0 0 16 16"><path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2zm10.66 8H3.34A1.34 1.34 0 0 1 2 10.66V5.34A1.34 1.34 0 0 1 3.34 4h9.32A1.34 1.34 0 0 1 14 5.34v5.32A1.34 1.34 0 0 1 12.66 12zM8 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+                            Start Live Webcam
+                        </button>
+                        <button id="start-prerecorded-btn" class="flex items-center bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="mr-2" viewBox="0 0 16 16"><path d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2-2H2a2 2 0 0 1-2-2zm6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/></svg>
+                            Start Pre-recorded Video
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6 card">
+                        <div class="flex justify-between items-center mb-4">
+                           <h2 class="text-2xl font-semibold text-gray-800 text-left">Live Traffic Feed</h2>
+                           <p id="current-time" class="text-xl font-semibold text-gray-600">--:--:-- --</p>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg overflow-hidden aspect-video">
+                            <img src="http://localhost:5001/video_feed" alt="Live traffic feed" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-6 card">
+                            <div class="traffic-light w-24 h-56 mx-auto p-2 bg-gray-900 rounded-full flex-shrink-0">
+                                <div class="light" id="light-red"></div><div class="light" id="light-yellow"></div><div class="light" id="light-green"></div>
+                            </div>
+                            <div class="text-left flex-grow">
+                                <p class="text-gray-500 text-lg font-semibold" id="lane-active-status">Waiting for source...</p>
+                                <p class="text-gray-700 text-3xl font-bold mt-2" id="total-vehicles">Total Vehicles: 0</p>
+                            </div>
+                        </div>
+                        <div id="lane-A-card" class="bg-white rounded-xl shadow-lg p-6 card">
+                            <div class="flex justify-between items-center">
+                                <div><h3 class="text-xl font-semibold text-gray-700">Lane A</h3><p class="text-gray-500" id="lane-A-count">0 Vehicles</p></div>
+                                <div class="text-right"><p class="text-green-500 font-bold" id="lane-A-timer">Green Allotted: 0s</p></div>
+                            </div>
+                            <div class="progress-bar-container"><div id="lane-A-progress" class="progress-bar"></div></div>
+                        </div>
+                        <div id="lane-B-card" class="bg-white rounded-xl shadow-lg p-6 card">
+                             <div class="flex justify-between items-center">
+                                <div><h3 class="text-xl font-semibold text-gray-700">Lane B</h3><p class="text-gray-500" id="lane-B-count">0 Vehicles</p></div>
+                                <div class="text-right"><p class="text-green-500 font-bold" id="lane-B-timer">Green Allotted: 0s</p></div>
+                            </div>
+                             <div class="progress-bar-container"><div id="lane-B-progress" class="progress-bar"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <main id="tech-stack-page" class="page p-8 hidden">
+            <div class="container mx-auto">
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 text-center">Technology Stack</h2>
+                    <p class="text-gray-600 text-center mt-2 max-w-2xl mx-auto">The technologies that power UrbanPulse, from the user interface to the core AI engine.</p>
+                </div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Frontend Development</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center"><h4 class="text-lg font-bold text-gray-800 mt-4">HTML5 & CSS3</h4><p class="text-gray-500 text-sm mt-2">The structural backbone and styling for the web interface.</p></div>
+                    <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center"><h4 class="text-lg font-bold text-gray-800 mt-4">JavaScript (ES6+)</h4><p class="text-gray-500 text-sm mt-2">Powers the dynamic and interactive elements of the dashboard and website.</p></div>
+                    <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center"><h4 class="text-lg font-bold text-gray-800 mt-4">Tailwind CSS</h4><p class="text-gray-500 text-sm mt-2">A utility-first CSS framework for rapidly building modern, responsive designs.</p></div>
+                </div>
+                <h3 class="text-2xl font-semibold text-gray-800 mt-12 mb-4">Backend & AI</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center"><h4 class="text-lg font-bold text-gray-800 mt-4">Python</h4><p class="text-gray-500 text-sm mt-2">The primary language for our server-side logic and AI processing.</p></div>
+                    <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center"><h4 class="text-lg font-bold text-gray-800 mt-4">Flask</h4><p class="text-gray-500 text-sm mt-2">A lightweight web framework used to create the API that serves data to the frontend.</p></div>
+                    <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center"><h4 class="text-lg font-bold text-gray-800 mt-4">OpenCV</h4><p class="text-gray-500 text-sm mt-2">A computer vision library used for capturing and processing the video stream.</p></div>
+                    <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center"><h4 class="text-lg font-bold text-gray-800 mt-4">YOLOv8</h4><p class="text-gray-500 text-sm mt-2">A state-of-the-art, real-time object detection model for identifying vehicles.</p></div>
+                </div>
+            </div>
+        </main>
+        
+        <main id="help-page" class="page p-8 hidden">
+             <div class="container mx-auto max-w-3xl">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Contact & Support</h2>
+                     <div class="space-y-4 text-gray-700">
+                        <p class="flex items-center"><strong class="w-24">Developer:</strong> Arnav Mehta</p>
+                        <p class="flex items-center"><strong class="w-24">Contact:</strong> 6284203977</p>
+                        <p class="flex items-center"><strong class="w-24">Instagram:</strong> <a href="https://www.instagram.com/imarnv__/" target="_blank" class="text-blue-600 hover:underline">@imarnv__</a></p>
+                        <p class="flex items-center"><strong class="w-24">LinkedIn:</strong> <a href="https://www.linkedin.com/in/arnav-mehta-ba0a6028b/" target="_blank" class="text-blue-600 hover:underline">Arnav Mehta</a></p>
+                    </div>
+                    <div class="border-t mt-8 pt-6 text-center text-gray-500"><p>&copy; 2025 | Created & Hosted by Arnav Mehta</p></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
