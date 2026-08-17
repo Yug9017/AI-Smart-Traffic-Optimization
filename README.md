@@ -43,8 +43,8 @@ Dynamic Traffic Signal Timing
 Clone the repository:
 
 ```bash
-git clone https://github.com/Yug9017/AI-Drone-Traffic-Optimization.git
-cd AI-Drone-Traffic-Optimization
+git clone https://github.com/Yug9017/AI-Smart-Traffic-Optimization.git
+cd AI-Smart-Traffic-Optimization
 ```
 
 Install Python dependencies:
