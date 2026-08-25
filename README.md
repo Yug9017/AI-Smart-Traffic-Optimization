@@ -4,7 +4,7 @@ AI Smart Traffic Optimization is a machine learning and computer vision-based pr
 
 ## Features
 
-* Vehicle detection using YOLOv8
+* Vehicle detection using YOLOv26
 * Vehicle counting and traffic density analysis
 * Dynamic traffic signal timing
 * KNN-based traffic optimization
